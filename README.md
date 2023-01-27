@@ -12,3 +12,4 @@ Generally this list is for things Rust has or does; I probably won't be listing 
 - Everything about `Pin`
 - The ubiquitous use of `*const T` and `*mut T` instead of `NonNull` in the standard library
 - `Drop` takes `&mut Self` instead of `Self`, making certain kinds of destructuring impossible without `unsafe`.
+- The `Borrow` trait is too limited– it can't express other borrowed forms besides references.
