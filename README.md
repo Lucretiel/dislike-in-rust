@@ -8,6 +8,7 @@ Generally this list is for things Rust has or does; I probably won't be listing 
 
 ## The list
 
+- `panic` is recoverable. One of the major great things about Rust is how `Result` replaces exception and makes control flow explict, obviating the need for "exception safety". The idea that panics can unwind and recover removes this advantage. Given the choice I'd happily make `panic` and unconditional process abort.
 - The `Sum` and `Product` traits are generics gone too far; they're *such a pain* to use (because they're even worse than `collect` about failing type inference) and don't really serve any purpose (as far as I can tell) that isn't served by `FromIterator` or `fold`.
 - Everything about `Pin`
 - The ubiquitous use of `*const T` and `*mut T` instead of `NonNull` in the standard library
